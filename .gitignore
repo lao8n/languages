@@ -1,6 +1,6 @@
 *.exe
 *.pdb
-.bsp
-.metals
-.scala-build
-.vscode
+.bsp/
+.metals/
+.scala-build/
+.vscode/

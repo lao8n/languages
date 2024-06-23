@@ -11,7 +11,7 @@ func main() {
 		defer close(ch)
 		messages := []string{"hi", "from", "the", "thread"}
 		for _, m := range messages {
-			ch <- m
+			ch <- m // golang copies whether it is value or reference
 			time.Sleep(time.Second * 1)
 		}
 	}()

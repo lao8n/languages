@@ -5,6 +5,7 @@ use std::time::Duration;
 fn main(){
     let (tx, rx) = mpsc::channel();
 
+    // ownership in 1. thread 2. channel 3. in receiver
     thread::spawn(move || {
         let vals = vec![
             String::from("hi"),
@@ -14,7 +15,7 @@ fn main(){
         ];
 
         for val in vals {
-            tx.send(val).unwrap();
+            tx.send(val).unwrap(); // tx.send takes ownership
             thread::sleep(Duration::from_secs(1));
         }
     });
