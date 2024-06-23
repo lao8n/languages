@@ -2,12 +2,5 @@
     "editor.formatOnType": true,
     "[commonlisp]": {
         "editor.wordSeparators": "`|;:'\",()"
-    },
-    "files.associations": {
-        "iostream": "cpp",
-        "array": "cpp"
-    },
-    "files.watcherExclude": {
-        "**/target": true
     }
 }
