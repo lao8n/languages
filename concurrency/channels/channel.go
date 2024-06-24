@@ -5,7 +5,10 @@ import (
 	"time"
 )
 
+// TODO: under the hood channel is a buffer with mutexes to manage access
 func main() {
+	// golang channels default un-buffered and block the goroutine but not the underlying thread
+	// uses m:n scheduling
 	ch := make(chan string)
 	go func() {
 		defer close(ch)

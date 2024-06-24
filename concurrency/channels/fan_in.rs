@@ -3,7 +3,7 @@ use std::thread;
 use std::time::Duration;
 
 fn main() {
-    let (tx, rx) = mpsc::channel();
+    let (tx, rx) = mpsc::channel(); 
 
     spawn_sender(tx.clone(), vec![
         String::from("hi"),
@@ -21,6 +21,8 @@ fn main() {
     for received in rx {
         println!("Got: {received}");
     }
+    // unlike golang do not need to close a channel because when all references are dropped to a tx when no senders left
+    // note the converse is not true so if receivers destructed the senders will not be - they will error instead
 }
 
 fn spawn_sender(tx: mpsc::Sender<String>, messages: Vec<String>) {

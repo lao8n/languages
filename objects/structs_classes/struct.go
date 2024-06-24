@@ -4,7 +4,7 @@ package main
 
 import "fmt"
 
-type Employee struct {
+type Employee struct { // value type
 	Id     int
 	Name   string
 	Stats  []int
