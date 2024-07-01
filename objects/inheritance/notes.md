@@ -5,3 +5,6 @@ Inheritance is useful for
 Languages that do not allow inheritance
 * Rust = uses bounded parametric polymorphism
 * Golang
+
+TODO:
+* python deadly diamond problem - method resolution order

@@ -1,0 +1,1 @@
+* rust has both new type pattern and alias
