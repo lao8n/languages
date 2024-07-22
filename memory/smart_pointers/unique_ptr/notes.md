@@ -1,0 +1,1 @@
+equivalent to rust's box ptr
